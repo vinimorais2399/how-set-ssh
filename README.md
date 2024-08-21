@@ -1,8 +1,9 @@
 
 ## Passo 1 - Passando seu e-mail como categoria
 
+Rodar o comando </br>
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"` </br>
-ssh-keygen -t rsa -b 4096 -C "vinicius.morais@quickdigital.com.br"
+`ssh-keygen -t rsa -b 4096 -C "vinicius.morais@quickdigital.com.br"`
 
 ## Passo 2 - Prompts
 
@@ -24,12 +25,12 @@ Quando o ssh-agent estiver em execução, o comando a seguir vai adicionar a nov
 ssh-add -K /Users/you/.ssh/id_rsa
 A nova chave SSH agora está registrada e pronta para uso!
 
---- 
-Tomei esse erro de inicio:
-Enter PIN for authenticator:
-Provider "internal" returned failure -1
+### Tomei esse erro de inicio:</br>
+> Enter PIN for authenticator: </br>
+Provider "internal" returned failure -1</br>
 Unable to load resident keys: invalid format
----
+
+</br>
 ssh-add -vvv /Users/you/.ssh/id_rsa **foi o que passou**
 
 
