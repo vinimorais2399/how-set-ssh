@@ -1,16 +1,14 @@
 
-## Passo 1
-Passando seu e-mail
+## Passo 1 - Passando seu e-mail como categoria
 
-`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"` </br>
 ssh-keygen -t rsa -b 4096 -C "vinicius.morais@quickdigital.com.br"
 
-## Passo 2
+## Passo 2 - Prompts
 
 Após isso 2 prompts aparecem. O primeiro solicitando o arquivo no qual vc vai salvar a chave, e o local dele se desejar.
 
-o segundo, é para a fase secreta para a camada de segurançã adicional.
-
+o segundo, é para a fase secreta para a camada de segurança adicional.
 
 ### Passo 3 - Adicione a chave SSH ao ssh-agent.
 
@@ -26,35 +24,38 @@ Quando o ssh-agent estiver em execução, o comando a seguir vai adicionar a nov
 ssh-add -K /Users/you/.ssh/id_rsa
 A nova chave SSH agora está registrada e pronta para uso!
 
+--- 
+Tomei esse erro de inicio:
+Enter PIN for authenticator:
+Provider "internal" returned failure -1
+Unable to load resident keys: invalid format
+---
+ssh-add -vvv /Users/you/.ssh/id_rsa **foi o que passou**
 
-## Passo 4
-Com o token criado
 
+## Passo 4 - Bitbucket
+Com o token criado, acesse as configurações no Bitbucket.
 https://bitbucket.org/account/settings/ssh-keys/
-- clicar no btn add Key
+
+1. clicar no btn add Key
   - de um label
   - cole a Key no campo 
     - modelo de chave: 
       ssh-rsa [.....KEY]vinicius.morais@quickdigital.com.br
 
-  - só salvar
-
----
-Tomei esse erro:
-Enter PIN for authenticator:
-Provider "internal" returned failure -1
-Unable to load resident keys: invalid format
----
+  - salvar
 
 ### Sucesso
 Se sucesso, você recebe um e-mail também com a chave adicionada na conta
 
 
+### Se outro arquivo/key
+![a](https://raw.githubusercontent.com/vinimorais2399/how-set-ssh/main/assets/image.png)<br>
+
 
 ### Links úteis
 <br>
 
-![a](https://raw.githubusercontent.com/vinimorais2399/how-set-ssh/main/assets/image.png)<br>
 [Doc Oficial](https://www.atlassian.com/br/git/tutorials/git-ssh) <br>
 [TroubleShooting](https://confluence.atlassian.com/bbkb/troubleshooting-ssh-issues-302811847.html)
 
