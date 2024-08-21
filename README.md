@@ -1,3 +1,7 @@
+# SSH Keys
+
+*se windows: Rodar comandos dentro do Git BASH esses comandos abaixo*
+
 
 ## Passo 1 - Passando seu e-mail como categoria
 
@@ -57,6 +61,7 @@ Se sucesso, você recebe um e-mail também com a chave adicionada na conta
 ### Links úteis
 <br>
 
+[MadeWith](https://readme.so/pt/editor)
 [Doc Oficial](https://www.atlassian.com/br/git/tutorials/git-ssh) <br>
 [TroubleShooting](https://confluence.atlassian.com/bbkb/troubleshooting-ssh-issues-302811847.html)
 
